@@ -84,7 +84,7 @@ Rails.application.configure do
     port:587,
     domain: "test-tf.onrender.com"
     user_name: ENV['GMAIL_USERNAME'],
-    password: ENV['GMAIL_PASSWORD']
+    password: ENV['GMAIL_PASSWORD'],
     authentication: :plain,
     enable_starttles_auto: true
   }
