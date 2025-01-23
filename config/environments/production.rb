@@ -82,11 +82,11 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:"smtp.gmail.com",
     port:587,
-    domain: "test-tf.onrender.com"
+    domain: "test-tf.onrender.com",
     user_name: ENV['GMAIL_USERNAME'],
     password: ENV['GMAIL_PASSWORD'],
     authentication: :plain,
-    enable_starttles_auto: true
+    enable_starttls_auto: true  
   }
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
