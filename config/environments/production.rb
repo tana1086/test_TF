@@ -77,16 +77,15 @@ Rails.application.configure do
   # Disable caching for Action Mailer templates even if Action Controller
   # caching is enabled.
   config.action_mailer.perform_caching = false
-
   config.action_mailer.default_url_options = { host: "test-tf.onrender.com", protocol: 'https' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:"smtp.gmail.com",
     port:587,
+    domain: "test-tf.onrender.com"
     user_name: ENV['GMAIL_USERNAME'],
     password: ENV['GMAIL_PASSWORD']
-    authentication: :login,
-    openssl_verify_mode: :'peer',
+    authentication: :plain,
     enable_starttles_auto: true
   }
   # Ignore bad email addresses and do not raise email delivery errors.
