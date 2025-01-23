@@ -1,0 +1,1 @@
+curl -s https://raw.githubusercontent.com/tigrish/devise-i18n/master/rails/locales/ja.yml -o config/locales/devise.ja.yml
