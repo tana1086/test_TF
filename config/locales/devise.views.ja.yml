@@ -141,6 +141,7 @@ ja:
       taken: "既に存在します。"
       confirmation: "が一致しません。"
       too_short: "6文字以上で半角英数字を入力してください。"
+      blank: "が入力されていません。"
       not_saved:
         one: "エラーが発生したため %{resource} は保存されませんでした。"
         other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"

@@ -1,0 +1,21 @@
+<h1>プロフィール編集</h1>
+
+<%= form_with model: @profile do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :target %>
+    <%= form.text_field :target %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+  <div>
+    <%= link_to '戻る', profiles_path %>
+  </div>
+<% end %>

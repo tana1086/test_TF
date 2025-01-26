@@ -1,18 +1,28 @@
 <p style="color: green"><%= notice %></p>
-
-<%= current_user.email %>
-
+<div>現在ログイン中のユーザー：<span class="text-green-600"><%= current_user.profile.name %></span></div>
+<br>
 <% content_for :title, "Posts" %>
+<%= current_user.name %>
 
-<h1>Posts</h1>
+<h1>投稿</h1>
 
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post %>
+      <%= link_to "詳細", post %>
     </p>
   <% end %>
 </div>
-
-<%= link_to "New post", new_post_path %>
+<br>
+<br>
+<%= link_to "新しい投稿", new_post_path %>
+<br>
+<br>
+<%= link_to "プロフィールへ", profiles_path %>
+<br>
+<br>
+<br>
+<% if user_signed_in? %>
+  <%= link_to 'ログアウトします', destroy_user_session_path, data: { turbo_method: :delete }%>
+<% end %>

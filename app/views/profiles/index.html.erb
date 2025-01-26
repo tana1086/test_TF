@@ -1,0 +1,11 @@
+<h1>ユーザープロフィール画面</h1>
+<br>
+<div>名前:<%= current_user.profile.name %></div>
+<div>目標:<%= current_user.profile.target %></div>
+<br>
+<br>
+
+<%= link_to "プロフィール編集", edit_profile_path(@profile) %>
+<div>
+  <%= link_to '戻る', posts_path %>
+</div>

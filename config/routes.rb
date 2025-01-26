@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users #認証を付けるとき戻す
   resources :posts
+  resources :profiles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
@@ -14,5 +15,5 @@ Rails.application.routes.draw do
 
 
   # Defines the root path route ("/")
-  root "posts#index"
+  root "top#index"
 end
